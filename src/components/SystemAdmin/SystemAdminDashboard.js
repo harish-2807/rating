@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './SystemAdminDashboard.css';
 import UserList from './UserList';
 import StoreList from './StoreList';
