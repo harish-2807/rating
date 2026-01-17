@@ -1,0 +1,148 @@
+.store-list {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.store-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+
+.store-list h2 {
+  margin: 0 0 2rem 0;
+  color: #333;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.store-list h2::before {
+  content: '🏪';
+  font-size: 1.5rem;
+}
+
+.filter-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+}
+
+.filter-inputs input {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+  background: white;
+}
+
+.filter-inputs input:focus {
+  outline: none;
+  border-color: #4facfe;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
+  transform: translateY(-2px);
+}
+
+.stores-table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.stores-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.stores-table thead {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.stores-table th {
+  padding: 1.25rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: white;
+  border-bottom: none;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stores-table th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.stores-table th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.stores-table td {
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+  transition: background 0.2s;
+}
+
+.stores-table tbody tr {
+  transition: all 0.2s;
+}
+
+.stores-table tbody tr:hover {
+  background: linear-gradient(90deg, rgba(79, 172, 254, 0.05), rgba(0, 242, 254, 0.05));
+  transform: scale(1.01);
+}
+
+.stores-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.stores-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  color: white;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 4px rgba(67, 233, 123, 0.3);
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 3rem;
+  font-size: 1.1rem;
+}
+
+.no-data::before {
+  content: '🔍';
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
